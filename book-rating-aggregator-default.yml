@@ -1,0 +1,7 @@
+management:
+  security:
+    enabled: false
+
+spring:
+  zipkin:
+    base-url: http://zipkin-app:8080/
