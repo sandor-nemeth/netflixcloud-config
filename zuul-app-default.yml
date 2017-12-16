@@ -4,7 +4,7 @@ management:
 
 zuul:
   routes:
-    book-service:
+    bookstore:
       path: /book-store/**
       sensitive-headers: Set-Cookie,Authorization
 
