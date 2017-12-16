@@ -1,0 +1,19 @@
+management:
+  security:
+    enabled: false
+
+zuul:
+  routes:
+    book-service:
+      path: /book-store/**
+      sensitive-headers: Set-Cookie,Authorization
+
+hystrix:
+  command:
+    book-store:
+      execution:
+        isolation:
+          thread:
+            timeout-in-milliseconds: 60000
+
+
