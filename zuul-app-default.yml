@@ -3,10 +3,11 @@ management:
     enabled: false
 
 zuul:
-  ignoredServices: '*'
+  ignored-services: '*'
   routes:
     book-store:
       path: /books/**
+      serviceId: book-store
       sensitive-headers: Set-Cookie,Authorization
     rating-store:
       path: /ratings/**
