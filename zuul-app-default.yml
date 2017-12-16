@@ -4,13 +4,21 @@ management:
 
 zuul:
   routes:
-    bookstore:
-      path: /book-store/**
+    book-store:
+      path: /books/**
+      sensitive-headers: Set-Cookie,Authorization
+    rating-store:
+      path: /ratings/**
       sensitive-headers: Set-Cookie,Authorization
 
 hystrix:
   command:
     book-store:
+      execution:
+        isolation:
+          thread:
+            timeout-in-milliseconds: 60000
+    rating-store:
       execution:
         isolation:
           thread:
