@@ -10,5 +10,6 @@ eureka:
   instance:
     hostName: book-store
     appname: book-store
-    instance-id: ${spring.application.name}:${spring.application.instance_id}
     preferIpAddress: false
+    metadataMap: 
+      instanceId: ${spring.application.name}:${random.int}
