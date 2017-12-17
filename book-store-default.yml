@@ -9,5 +9,6 @@ spring:
 eureka:
   instance:
     hostName: book-store
-    instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    appname: book-store
+    instance-id: ${spring.application.name}:${spring.application.instance_id}
     preferIpAddress: false
