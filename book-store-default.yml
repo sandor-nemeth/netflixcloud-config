@@ -5,3 +5,8 @@ management:
 spring:
   zipkin:
     base-url: http://zipkin-app:8080/
+
+eureka:
+  instance:
+    hostName: book-store
+    preferIpAddress: false

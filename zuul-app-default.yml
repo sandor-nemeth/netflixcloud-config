@@ -3,7 +3,7 @@ management:
     enabled: false
 
 zuul:
-  ignored-services: '*'
+  ignored-services: '*' 
   routes:
     book-store:
       path: /books/**
