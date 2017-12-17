@@ -8,10 +8,6 @@ spring:
 
 eureka:
   instance:
-    
-
-eureka:
-  instance:
     hostName: book-store
     instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}}
     preferIpAddress: false
