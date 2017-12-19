@@ -4,7 +4,7 @@ management:
 
 spring:
   zipkin:
-    base-url: http://zipkin-app:8080/
+    base-url: http://zipkin-app/
 
 eureka:
   instance:
