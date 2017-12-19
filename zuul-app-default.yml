@@ -5,6 +5,12 @@ management:
 spring:
   zipkin:
     base-url: http://zipkin-app/
+    locator:
+      discovery:
+        enabled: true
+  sleuth:
+    sampler:
+      percentage: 1.0
 
 zuul:
   ignored-services: '*' 
