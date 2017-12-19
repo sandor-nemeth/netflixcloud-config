@@ -12,6 +12,10 @@ zuul:
     rating-store:
       path: /ratings/**
       sensitive-headers: Set-Cookie,Authorization
+    book-rating-aggregator:
+      path: /all/**
+      serviceId: book-rating-aggregator
+      sensitive-headers: Set-Cookie,Authorization
 
 hystrix:
   command:
@@ -25,5 +29,9 @@ hystrix:
         isolation:
           thread:
             timeout-in-milliseconds: 60000
-
+    book-rating-aggregator:
+      execution:
+        isolation:
+          thread:
+            timeout-in-milliseconds: 60000
 
